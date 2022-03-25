@@ -1439,11 +1439,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@overthestream/aidy@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@overthestream/aidy/-/aidy-0.3.1.tgz#e9d2d0f88e1b03856d90985c952cb0c10f8e91c2"
-  integrity sha512-083Asj2DQK+yweXmoFU5agkT23PzxViWwScPFSLvdL447x8veBRVg72l7Ed6+xMFNEJxbEmfYGrvNE+drtuonQ==
-
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.4.tgz#df0d0d855fc527db48aac93c218a0bf4ada41f99"
