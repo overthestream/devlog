@@ -2,16 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterLayoutWrapper = styled.footer`
-  width: 100%;
-  max-width: 1290px;
+  width: 1024px;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 768px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const FooterWrapper = styled.div`
   width: 100%;
   height: 180px;
-
-  padding: 48px;
 
   display: flex;
   flex-direction: column;
