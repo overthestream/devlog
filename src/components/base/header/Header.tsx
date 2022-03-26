@@ -64,8 +64,8 @@ const Header: React.FC = () => {
 
   useScroll(handleScroll);
 
-  const homePageURL = 'http://localhost:8080';
-  const postsURL = 'http://localhost:8080';
+  const homePageURL = 'http://localhost:3000';
+  const postsURL = 'http://localhost:3000';
   return (
     <>
       <HeaderWrapper>
