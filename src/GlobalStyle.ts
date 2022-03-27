@@ -43,9 +43,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  * {
+  * { 
+    color: #3c4249;
     box-sizing: border-box;
-    color: #f1f3f5;
     margin: 0;
 
     ::selection {

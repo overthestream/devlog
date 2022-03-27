@@ -15,8 +15,6 @@ const HeaderWrapper = styled.div`
   align-items: center;
 
   background: rgba(255, 255, 255, 0.25);
-
-  color: black;
 `;
 
 const HeaderLayout = styled(ResponsiveBox)`
