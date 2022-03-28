@@ -14,7 +14,7 @@ const HeaderWrapper = styled.div`
   display: inline-flex;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.8);
 `;
 
 const HeaderLayout = styled(ResponsiveBox)`
