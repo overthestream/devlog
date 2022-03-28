@@ -44,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * { 
-    color: #3c4249;
     box-sizing: border-box;
     margin: 0;
 
