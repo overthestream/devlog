@@ -1,6 +1,16 @@
+const draculaGreen = '#4FFB7B';
+const draculaPink = '#FA89CD';
+const draculaSky = '#8AE9FD';
+const draculaYellow = '#F2F996';
+const draculaWhite = '#F8F8F2';
+const draculaPurple = '#BD93F9';
+const draculaNavy = '#6272A4';
+const draculaOrange = '#FCDB00';
+const draculaBackground = '#282A36';
+
 export default {
   'code[class*="language-"]': {
-    color: '#bd93f9',
+    color: draculaPurple,
     background: 'none',
     textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
@@ -19,8 +29,8 @@ export default {
     hyphens: 'none',
   },
   'pre[class*="language-"]': {
-    color: '#f8f8f2',
-    background: '#282a36',
+    color: draculaWhite,
+    background: draculaBackground,
     textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
     textAlign: 'l eft',
@@ -42,107 +52,107 @@ export default {
     borderRadius: '0.3em',
   },
   ':not(pre) > code[class*="language-"]': {
-    background: '#282a36',
+    background: draculaBackground,
     padding: '.1em',
     borderRadius: '.3em',
     whiteSpace: 'normal',
   },
   comment: {
-    color: '#6272a4',
+    color: draculaNavy,
   },
   prolog: {
-    color: '#6272a4',
+    color: draculaNavy,
   },
   doctype: {
-    color: '#6272a4',
+    color: draculaNavy,
   },
   cdata: {
-    color: '#6272a4',
+    color: draculaNavy,
   },
   punctuation: {
-    color: '#f8f8f2',
+    color: draculaOrange,
   },
   '.namespace': {
     Opacity: '.7',
   },
   property: {
-    color: '#ff79c6',
+    color: draculaPink,
   },
   tag: {
-    color: '#ff79c6',
+    color: draculaPink,
   },
   constant: {
-    color: '#ff79c6',
+    color: draculaPink,
   },
   symbol: {
-    color: '#ff79c6',
+    color: draculaPink,
   },
   deleted: {
-    color: '#ff79c6',
+    color: draculaPink,
   },
   boolean: {
-    color: '#bd93f9',
+    color: draculaPurple,
   },
   number: {
-    color: '#bd93f9',
+    color: draculaPurple,
   },
   selector: {
-    color: '#8AE9FD',
+    color: draculaSky,
   },
   'attr-name': {
-    color: '#8AE9FD',
+    color: draculaSky,
   },
   string: {
-    color: '#8AE9FD',
+    color: draculaYellow,
   },
   char: {
-    color: '#8AE9FD',
+    color: draculaSky,
   },
   builtin: {
-    color: '#8AE9FD',
+    color: draculaSky,
   },
   inserted: {
-    color: '#8AE9FD',
+    color: draculaSky,
   },
   operator: {
-    color: '#FA89CD',
+    color: draculaPink,
   },
   entity: {
-    color: '#f8f8f2',
+    color: draculaWhite,
     cursor: 'help',
   },
   url: {
-    color: '#f8f8f2',
+    color: draculaWhite,
   },
   '.language-css .token.string': {
-    color: '#f8f8f2',
+    color: draculaWhite,
   },
   '.style .token.string': {
-    color: '#f8f8f2',
+    color: draculaWhite,
   },
   variable: {
-    color: '#f8f8f2',
+    color: draculaWhite,
   },
   atrule: {
-    color: '#f1fa8c',
+    color: draculaYellow,
   },
   'attr-value': {
-    color: '#f1fa8c',
+    color: draculaYellow,
   },
   function: {
-    color: '#4FFB7B',
+    color: draculaGreen,
   },
   'class-name': {
-    color: '#f1fa8c',
+    color: draculaYellow,
   },
   keyword: {
-    color: '#FA89CD',
+    color: draculaPink,
   },
   regex: {
-    color: '#ffb86c',
+    color: draculaOrange,
   },
   important: {
-    color: '#ffb86c',
+    color: draculaOrange,
     fontWeight: 'bold',
   },
   bold: {
