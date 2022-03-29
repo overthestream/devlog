@@ -5,6 +5,7 @@ import oc from 'open-color';
 import ResponsiveBox from 'components/base/Responsive';
 import { SpecialComponents } from 'react-markdown/lib/ast-to-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import remarkGfm from 'remark-gfm';
 
 import style from 'components/base/Markdown/style';
 
@@ -12,6 +13,8 @@ const MarkdownWrapper = styled(ResponsiveBox)`
   line-height: 2.5rem;
 `;
 
+// 구현할 것 :  <hr/>, h2?쯤 되는 태그에 구분선 넣기. tag 기능. 왼쪽 h별 목차, 목록(ul, li) 좀 더 예쁘게.
+// 이미지 넣는 방식 고안하기
 const BlockQuoteWrapper = styled.blockquote`
   width: 100%;
   padding: 0 20px;
@@ -20,31 +23,16 @@ const BlockQuoteWrapper = styled.blockquote`
   border-left-color: ${oc.indigo[8]};
 `;
 
-// 구현할 것 :  <hr/>, h2?쯤 되는 태그에 구분선 넣기. tag 기능. 왼쪽 h별 목차, 목록 좀 더 예쁘게.
-// ~~ cancelline 이미지 넣는 방식 고안하기
 const BlockQuote: React.FC = (props) => {
   const { children } = props;
+
   return <BlockQuoteWrapper>{children}</BlockQuoteWrapper>;
 };
 
 const Code: SpecialComponents['code'] = (props) => {
   const { inline, className, children } = props;
   const match = /language-(\w+)/.exec(className || '');
-
-  return !inline && match ? (
-    <SyntaxHighlighter
-      style={style}
-      language={match[1]}
-      PreTag="div"
-      useInlineStyles
-      lineNumberStyle={{ color: '#6272A4' }}
-      showLineNumbers
-      showInlineLineNumbers={false}
-      {...props}
-    >
-      {String(children).replace(/\n$/, '')}
-    </SyntaxHighlighter>
-  ) : (
+  const inlineCodeBlock = (
     <SyntaxHighlighter
       PreTag="span"
       useInlineStyles
@@ -60,6 +48,42 @@ const Code: SpecialComponents['code'] = (props) => {
       {String(children).replace(/\n$/, '')}
     </SyntaxHighlighter>
   );
+  if (inline) return inlineCodeBlock;
+  if (match) {
+    const LanguageDefinedCodeBlock = (
+      <SyntaxHighlighter
+        style={style}
+        language={match[1]}
+        PreTag="div"
+        useInlineStyles
+        lineNumberStyle={{ color: '#6272A4' }}
+        showLineNumbers
+        showInlineLineNumbers={false}
+        {...props}
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    );
+    return LanguageDefinedCodeBlock;
+  }
+
+  const CodeBlock = (
+    <SyntaxHighlighter
+      PreTag="div"
+      useInlineStyles
+      lineNumberStyle={{ color: '#6272A4' }}
+      showInlineLineNumbers={false}
+      customStyle={{
+        margin: 0,
+        'background-color': oc.gray[3],
+        'border-radius': '10px',
+      }}
+      {...props}
+    >
+      {String(children).replace(/\n$/, '')}
+    </SyntaxHighlighter>
+  );
+  return CodeBlock;
 };
 
 const example = `
@@ -132,7 +156,6 @@ const Container = styled.div<{ age: number }>;
 ~~~
 
 <pre><code>inlinecode</code></pre>
-~~~ jk ~~~
 
 
 # Hello World! 👋
@@ -145,7 +168,12 @@ const Container = styled.div<{ age: number }>;
 
 ## I'm currently working on ⌨️
 
-    -
+    - hi
+    - hi
+    as
+    as
+    as
+    as
 
 ## Misc 💻
 
@@ -164,8 +192,9 @@ const MarkdownRenderer: React.FC = () => {
           blockquote: BlockQuote,
           code: Code,
         }}
+        remarkPlugins={[remarkGfm]}
       >
-        {`\`const\`${example}`}
+        {example}
       </ReactMarkdown>
     </MarkdownWrapper>
   );
