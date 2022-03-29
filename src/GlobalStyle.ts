@@ -11,10 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background: #0d1b2d;
     margin: 0;
     padding: 0;
-    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    font-family: 'Fira Code', monospace;
+    font-family: "Noto Sans KR", 'Fira Code', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -26,9 +23,7 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     border: none;
 
-    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: "Noto Sans KR", 'Fira Code', monospace;
   }
 
   a, a:visited {
