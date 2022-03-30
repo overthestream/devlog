@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const FooterLayoutWrapper = styled.footer`
   width: 1024px;
   margin: 0 auto;
+  padding: 0 10px;
 
   @media (max-width: 1024px) {
     width: 768px;
