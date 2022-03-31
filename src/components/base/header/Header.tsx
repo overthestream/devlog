@@ -14,9 +14,7 @@ const HeaderWrapper = styled.div`
   display: inline-flex;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.25);
-
-  color: black;
+  background: rgba(255, 255, 255, 0.8);
 `;
 
 const HeaderLayout = styled(ResponsiveBox)`
@@ -64,8 +62,8 @@ const Header: React.FC = () => {
 
   useScroll(handleScroll);
 
-  const homePageURL = 'http://localhost:8080';
-  const postsURL = 'http://localhost:8080';
+  const homePageURL = 'http://localhost:3000';
+  const postsURL = 'http://localhost:3000';
   return (
     <>
       <HeaderWrapper>

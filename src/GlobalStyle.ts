@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import 'fonts/font.css';
 
 const GlobalStyle = createGlobalStyle`
+
   html {
+    font-family: 'Fira Code', 'Noto Sans KR', monospace ;
     font-size: 16px;
     height: 100%;
   }
@@ -11,10 +14,6 @@ const GlobalStyle = createGlobalStyle`
     background: #0d1b2d;
     margin: 0;
     padding: 0;
-    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    font-family: 'Fira Code', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -25,14 +24,9 @@ const GlobalStyle = createGlobalStyle`
     resize: none;
     outline: none;
     border: none;
-
-    font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
   }
 
   a, a:visited {
-    color: inherit;
     text-decoration: none;
   }
 
@@ -44,9 +38,8 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  * {
+  * { 
     box-sizing: border-box;
-    color: #f1f3f5;
     margin: 0;
 
     ::selection {

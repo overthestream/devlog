@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Fira Code';
+  src: url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+  font-weight: 300;				
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+  font-weight: 300;				
+  font-style: normal;
+  unicode-range: U+AC00-D7A3;
+}

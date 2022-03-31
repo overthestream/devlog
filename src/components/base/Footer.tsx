@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const FooterLayoutWrapper = styled.footer`
   width: 1024px;
   margin: 0 auto;
+  padding: 0 10px;
 
   @media (max-width: 1024px) {
     width: 768px;
@@ -24,14 +25,14 @@ const FooterWrapper = styled.div`
 `;
 
 const FooterTitle = styled.h1`
+  color: #f1f3f5;
   font-size: 1.5rem;
   font-weight: 800;
-  font-family: 'Fira Code', monospace;
 `;
 
 const FooterDescription = styled.div`
+  color: #f1f3f5;
   font-weight: bold;
-  font-family: 'Fira Code', monospace;
 `;
 
 const Octocat = styled.a`
