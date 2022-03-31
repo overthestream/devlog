@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
   html {
     font-size: 16px;
     height: 100%;
@@ -11,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     background: #0d1b2d;
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans KR", 'Fira Code', monospace;
+    font-family: 'Fira Code',"Noto Sans KR", monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
