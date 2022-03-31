@@ -41,9 +41,9 @@ const ProgressBar: React.FC = () => {
         document.documentElement.clientHeight
       ) - window.innerHeight;
     const temp = (1 - (maxHeight - window.pageYOffset) / maxHeight) * 100;
-    // const newScrollProgress = temp < 2 ? 0 : temp > 98 ? 100 : temp;
     setScrollProgress(temp);
-  }, 100);
+    console.log(scrollProgress);
+  }, 50);
 
   useScroll(getScrollProgress);
 
