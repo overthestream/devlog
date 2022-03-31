@@ -28,13 +28,11 @@ const FooterTitle = styled.h1`
   color: #f1f3f5;
   font-size: 1.5rem;
   font-weight: 800;
-  font-family: 'Fira Code', monospace;
 `;
 
 const FooterDescription = styled.div`
   color: #f1f3f5;
   font-weight: bold;
-  font-family: 'Fira Code', monospace;
 `;
 
 const Octocat = styled.a`

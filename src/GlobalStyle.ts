@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import 'fonts/font.css';
 
 const GlobalStyle = createGlobalStyle`
 
   html {
+    font-family: 'Fira Code', 'Noto Sans KR', monospace ;
     font-size: 16px;
     height: 100%;
   }
@@ -12,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     background: #0d1b2d;
     margin: 0;
     padding: 0;
-    font-family: 'Fira Code',"Noto Sans KR", monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -23,8 +24,6 @@ const GlobalStyle = createGlobalStyle`
     resize: none;
     outline: none;
     border: none;
-
-    font-family: "Noto Sans KR", 'Fira Code', monospace;
   }
 
   a, a:visited {
