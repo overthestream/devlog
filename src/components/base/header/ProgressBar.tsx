@@ -17,7 +17,16 @@ const Bar = styled.div<BarProps>`
   background: ${oc.indigo[8]};
   opacity: 1;
 `;
+const BarToFill = styled.div<BarProps>`
+  width: ${(props) => `${100 - props.scrollProgress}%`};
+  height: 3px;
 
+  position: fixed;
+  right: 0px;
+  top: 67px;
+  background: ${oc.gray[2]};
+  opacity: 1;
+`;
 const ProgressBar: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
@@ -32,12 +41,17 @@ const ProgressBar: React.FC = () => {
         document.documentElement.clientHeight
       ) - window.innerHeight;
     const temp = (1 - (maxHeight - window.pageYOffset) / maxHeight) * 100;
-    // const newScrollProgress = temp < 2 ? 0 : temp > 98 ? 100 : temp;
     setScrollProgress(temp);
-  }, 100);
+    console.log(scrollProgress);
+  }, 50);
 
   useScroll(getScrollProgress);
 
-  return <Bar scrollProgress={scrollProgress} />;
+  return (
+    <>
+      <Bar scrollProgress={scrollProgress} />
+      <BarToFill scrollProgress={scrollProgress} />
+    </>
+  );
 };
 export default ProgressBar;
