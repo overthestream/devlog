@@ -2,13 +2,13 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import oc from 'open-color';
-import ResponsiveBox from 'components/base/Responsive';
+import ResponsiveBox from 'components/base/responsive/Responsive';
 import { SpecialComponents } from 'react-markdown/lib/ast-to-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 
-import style from 'components/base/Article/style';
+import style from 'components/base/article/style';
 
 const MarkdownWrapper = styled(ResponsiveBox)`
   line-height: 2.5rem;

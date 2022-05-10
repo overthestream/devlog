@@ -3,7 +3,7 @@ import useScroll from 'hooks/useScroll';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import ResponsiveBox from 'components/base/Responsive';
+import ResponsiveBox from 'components/base/responsive/Responsive';
 import ProgressBar from 'components/base/header/ProgressBar';
 
 const HeaderWrapper = styled.div`
