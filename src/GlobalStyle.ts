@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    overflow-y: auto;
+    overflow-y: visible;
   }
 `;
 
