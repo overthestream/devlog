@@ -8,7 +8,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 
-import style from 'components/base/Markdown/style';
+import style from 'components/base/Article/style';
 
 const MarkdownWrapper = styled(ResponsiveBox)`
   line-height: 2.5rem;
@@ -167,7 +167,109 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = (props) => {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
       >
-        {markdown}
+        {`tag: , , , ;
+
+# h1
+
+## h2
+
+### h3
+
+1. hi
+
+2. hi
+
+<hr/>
+3. hi
+
+> ghihihihi
+> > nested quote
+
+# React implementation using Typescript
+
+[타입스크립트로 컴포넌트 children 사용하기](https://www.carlrippon.com/react-children-with-typescript/)
+
+## UseState 사용하기_hi_
+
+\`cosnt\`
+
+~~~ts
+const [count, setCount] = useState<number>(0);
+
+// 12312312
+~~~
+
+## Map
+
+배열. Mapping
+
+~~~ts
+arr.map(callback, [thsArg]);
+~~~
+
+- callback : 새로운 배열의 요소를 생성하는 함수.
+  - currentValue: 현재 처리하는 요소
+  - index: 현재 처리하는 요소의 index 값
+  - array: 현재 처리하는 원본 배열
+- thisArg(선택 항목): callback함수에서 사용할 this 레퍼런스
+
+##### 예시
+
+~~~ts
+var numbers: <number> = [1, 2, 3, 4, 5];
+
+var processed = numbers.map(function (num) {
+ return num * num;
+});
+~~~
+
+#### 데이터 배열을 컴포넌트 배열로 변환하기
+
+~~~js
+import React from 'react';
+
+const IterationSample = () => {
+ const names = ['눈사람', '얼음', '눈'];
+ const nameList = names.map((name) => <li>{name}</name>);
+ return <ul>{nameList}</ul>;
+};
+
+export default IterationSample;
+~~~
+
+### 스타일드 컴포넌트
+
+~~~ts
+const Container = styled.div<{ age: number }>;
+~~~
+
+<pre><code>inlinecode</code></pre>
+
+# Hello World! 👋
+
+## I'm JeongHoon Rho ([overthestream]) 👨🏻‍💻
+
+- Junior @ Korea University Dept. of Computer Science & Engineering | 고려대학교 컴퓨터학과 20학번, 3학년
+
+- KU ALPS (Algorithm Learning & Problem Solving) Vice President | 고려대학교 알고리즘 학회 부회장 (2021)
+
+## I'm currently working on ⌨️
+
+    - hi
+    - hi
+    as
+    as
+    as
+    as
+
+## Misc 💻
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=overthestream)](https://github.com/anuraghazra/github-readme-stats)
+
+![hyp3rflow's solved.ac stats](https://github-readme-solvedac.hyp3rflow.vercel.app/api/?handle=bln01)
+
+[overthestream]: https://github.com/overthestream
+`}
       </ReactMarkdown>
     </MarkdownWrapper>
   );
